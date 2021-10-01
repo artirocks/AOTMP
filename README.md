@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+====About Our solution:
+Constantly changing and evolving solutions, services and products available in the telecom, mobility, and IT management industry create sourcing, evaluation, and selection complexities that SMBs (small and mid-sized businesses) are not always equipped to address due to limited time or resources. How do SMBs more easily and efficiently sort out the thousands of options available to them?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our solution is an IT product Service Recommender System which will help SMBs find verified solutions to simplify the sourcing, evaluation, and selection of telecom, mobility, and IT services and solutions.
 
-## Available Scripts
+====Requirements====
+Python
+NodeJS
+JavaScript
 
-In the project directory, you can run:
+====File Structure====
+src
+  -apis
+     -main.ipynb
+  -components
+     -Efficiency
+     -EfficiencyResult
+     -Footer
+     -Recomendation
+     -SimilarFeature
+     -SimilarProduct
+     -SimilarRating
+   -dataset
+     -dataset.csv
+     -dataset.json
+   -services
+     -ProductService
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+====File Description====
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+==Backend (Python) ===
+CreateDataset.ipynb: This notebook creates a synthetic dataset which we have used in our backend and training of the machine learning model under Federated Settings
 
-### `npm test`
+FederatedLearning.ipynb: This notebook explains the Exploratory Data Analysis and overall training of the global model with client models under Federated Settings. Four models each for Security, Scalability, Ease Of Use, Latency are trained under Federated Settings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+mnistAlpha_0.1_FL.ipynb: This notebook is an example of how pseudo labellings can be used in our problem statement to introduce semi-supervised learning with only 10% labelled data.
 
-### `npm run build`
+==Frontend (React code base) ===
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please follow these commands to create react project and install required nodejs dependencies.
+npx create-react-app fl-aotmp            =>  Create the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install bootstrap --save             =>  Install Bootstrap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm intall react-router-dom              =>  For Router, Switch
 
-### `npm run eject`
+< Install Other required Dependencies >
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+restApiProduct.ipynb                  =>     Host api end points as server using colab
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+=> Copy Generated Public URL and enter in  PRODUCT_API_BASE_URL  in services/ProductsService.js  file.  Eg : const PRODUCT_API_BASE_URL = "http://9d78-34-86-177-191.ngrok.io";
 
-## Learn More
+=> Sign up the form
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+=> Log In
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=> Follow as directed in the demo video.
