@@ -9,10 +9,32 @@ NodeJS
 JavaScript
 
 ====File Structure====
-src
-  -apis
+AOTMP
+  -APIS (Having APIs for user LogIn/ SignUp Data)
+    -env (Python Environment)
+    -credentials ( Static Database for Credentials for Demo ) 
+       credentils file
+    - main ( Main File having APIs for LogIn, Sign Up)
+  
+  -FL Models ( Files to train the model using Federated Learning )
+    -CreateDataset.ipynb ( To create the generic real world dataset)
+    -FederatedLearning.ipynb ( To train the model using FL )
+    -mnistAlpha_FL_0_1.ipynb ( To Analyse the Pseudolabeling Semi Supervised Classification Result)
+    -restApiProduct.ipynb   ( To create Endpoints for Service/Product Recommendation System)
+  -public (To store the trained models)
+     -models (Trained models)
+
+  -server (GraphQL Server for SignUp /LogIn)
+     -src
+       -datasources (Datasources Components for APIs)
+       --graphql (Resolvers and schemas for APIS)
+
+  src ( Front End using React and Node JS)
+   -apis ( APIs for Product Recommendation System )
      -main.ipynb
-  -components
+  -assests (Common Image files used )
+     - many image files
+  -components ( Components for the UI)
      -Efficiency
      -EfficiencyResult
      -Footer
@@ -20,10 +42,12 @@ src
      -SimilarFeature
      -SimilarProduct
      -SimilarRating
-   -dataset
+   -dataset ( Dataset for the Produts/ Services)
      -dataset.csv
      -dataset.json
-   -services
+   -pages (UI Pages)
+     - pages for different screens
+   -services (Service)
      -ProductService
 
 
